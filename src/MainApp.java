@@ -62,7 +62,7 @@ public class MainApp{
         emekciler.stream()
                 .sorted((Comparator.comparing((Personel s)->s.cinsiyet().equals('K')).reversed()
                         .thenComparing((Personel s)->s.adi(),Collator.getInstance(new Locale("tr","TR")))))
-                .collect(Collectors.toList()).forEach(System.out::println);
+                .forEach(System.out::println);
 
         System.out.println("*****************");
 
