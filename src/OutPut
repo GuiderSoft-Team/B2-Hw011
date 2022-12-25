@@ -1,0 +1,64 @@
+ÇALIŞAN PERSONEL SAYISI: 16
+----------
+ERKEK PERSONEL SAYISI: 9
+----------
+KADIN PERSONEL SAYISI: 7
+----------
+TUM CALIŞANLARI MALİYETİ: 119825.0
+----------
+KADIN PERSONELLER :
+Personel[id=3, adi=Şerife, maas=6500.0, yas=37, cinsiyet=K]
+Personel[id=4, adi=Suna, maas=4900.0, yas=27, cinsiyet=K]
+Personel[id=8, adi=Songül, maas=8300.0, yas=19, cinsiyet=K]
+Personel[id=11, adi=Kadriye, maas=11200.0, yas=33, cinsiyet=K]
+Personel[id=12, adi=Fahriye, maas=9350.0, yas=42, cinsiyet=K]
+Personel[id=13, adi=Sezen, maas=7775.0, yas=29, cinsiyet=K]
+Personel[id=15, adi=Müzeyyen, maas=6950.0, yas=39, cinsiyet=K]
+----------
+Kadın çalişanlar Maaş Ortalaması: 7853,57
+Erkek çalişanlar Maaş Ortalaması: 7205,56
+Tüm Çalişanlar Maaş Ortalaması  : 7489,06
+----------
+TUM ÇALİSANLAR BÜYÜKTEN KÜÇÜĞE
+Personel[id=16, adi=Fatih, maas=6600.0, yas=56, cinsiyet=E]
+Personel[id=6, adi=İlhan, maas=5250.0, yas=55, cinsiyet=E]
+Personel[id=7, adi=Serkan, maas=4750.0, yas=47, cinsiyet=E]
+Personel[id=2, adi=Şahin, maas=3750.0, yas=45, cinsiyet=E]
+Personel[id=12, adi=Fahriye, maas=9350.0, yas=42, cinsiyet=K]
+Personel[id=10, adi=Osman, maas=13700.0, yas=41, cinsiyet=E]
+Personel[id=15, adi=Müzeyyen, maas=6950.0, yas=39, cinsiyet=K]
+Personel[id=3, adi=Şerife, maas=6500.0, yas=37, cinsiyet=K]
+Personel[id=9, adi=Ferhan, maas=11200.0, yas=34, cinsiyet=E]
+Personel[id=11, adi=Kadriye, maas=11200.0, yas=33, cinsiyet=K]
+Personel[id=1, adi=Ahmet, maas=7500.0, yas=30, cinsiyet=E]
+Personel[id=13, adi=Sezen, maas=7775.0, yas=29, cinsiyet=K]
+Personel[id=4, adi=Suna, maas=4900.0, yas=27, cinsiyet=K]
+Personel[id=14, adi=Cumhur, maas=5800.0, yas=26, cinsiyet=E]
+Personel[id=5, adi=Hakan, maas=6300.0, yas=23, cinsiyet=E]
+Personel[id=8, adi=Songül, maas=8300.0, yas=19, cinsiyet=K]
+----------
+35 YAŞINDAN BÜYÜK KADINLARIN SAYISI: 4
+----------
+50 YAŞINDAN KÜÇÜK ERKEKLERİN SAYISI :7
+----------
+TUM ÇALIŞANLAR YAS ORTALAMASI : 36,44
+------------------
+ONCE KADINLAR SONRA ERKEKLER İSME GÖRE SIRALI LİSTE
+Personel[id=12, adi=Fahriye, maas=9350.0, yas=42, cinsiyet=K]
+Personel[id=11, adi=Kadriye, maas=11200.0, yas=33, cinsiyet=K]
+Personel[id=15, adi=Müzeyyen, maas=6950.0, yas=39, cinsiyet=K]
+Personel[id=13, adi=Sezen, maas=7775.0, yas=29, cinsiyet=K]
+Personel[id=8, adi=Songül, maas=8300.0, yas=19, cinsiyet=K]
+Personel[id=4, adi=Suna, maas=4900.0, yas=27, cinsiyet=K]
+Personel[id=3, adi=Şerife, maas=6500.0, yas=37, cinsiyet=K]
+Personel[id=1, adi=Ahmet, maas=7500.0, yas=30, cinsiyet=E]
+Personel[id=14, adi=Cumhur, maas=5800.0, yas=26, cinsiyet=E]
+Personel[id=16, adi=Fatih, maas=6600.0, yas=56, cinsiyet=E]
+Personel[id=9, adi=Ferhan, maas=11200.0, yas=34, cinsiyet=E]
+Personel[id=5, adi=Hakan, maas=6300.0, yas=23, cinsiyet=E]
+Personel[id=6, adi=İlhan, maas=5250.0, yas=55, cinsiyet=E]
+Personel[id=10, adi=Osman, maas=13700.0, yas=41, cinsiyet=E]
+Personel[id=7, adi=Serkan, maas=4750.0, yas=47, cinsiyet=E]
+Personel[id=2, adi=Şahin, maas=3750.0, yas=45, cinsiyet=E]
+-----------
+İSMİ 'S' İLE BAŞLAYANLARIN MAAŞ TOPLAMI: 25725.0
