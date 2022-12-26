@@ -57,10 +57,10 @@ public class MainApp {
         System.out.println();
         List<Personel>KadinlarIsimSiraliListe= personel.stream().filter(i->i.cinsiyet()=='K')
                 .sorted(Comparator.comparing(Personel::adi, Collator.getInstance(new Locale("tr","TR")))).toList();
-        System.out.println();
+        System.out.println(KadinlarIsimSiraliListe);
         List<Personel>ErkeklerIsimSiraliListe= personel.stream().filter(i->i.cinsiyet()=='E')
                 .sorted(Comparator.comparing(Personel::adi, Collator.getInstance(new Locale("tr","TR")))).toList();
-        System.out.println();
+        System.out.println(ErkeklerIsimSiraliListe);
         System.out.println("İsmi S ile başlayan Çalışanlarınj Maaş Toplamı : "+personel.stream().filter(i->i.adi().charAt(0)=='S').mapToDouble(Personel::maas).sum());
 
     }
