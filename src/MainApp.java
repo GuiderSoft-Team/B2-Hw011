@@ -1,8 +1,42 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class MainApp {
     public static void main(String[] args) {
-
+        List<Personel> calisanlar = Personel.calisanlar();
+        long personelAdedi = calisanlar.stream().count();
+        System.out.println("Çalışan Personel Sayısı : "+personelAdedi);
+        System.out.println("-------------------");
+        long erkekPersonel = calisanlar.stream().filter(p -> p.cinsiyet().equals('E')).count();
+        long kadinPersonel = calisanlar.stream().filter(p -> p.cinsiyet().equals('K')).count();
+        System.out.printf("Kadın Personel Adedi : %d\tErkek Personel Adedi: %d\n",kadinPersonel,erkekPersonel);
+        System.out.println("----------------------------");
+        double toplamMaliyet = calisanlar.stream().mapToDouble(Personel::maas).sum();
+        System.out.println("Toplam Maliyet : "+toplamMaliyet);
+        System.out.println("-----------------------------------");
+        List<Personel> kadinCalisanlar = calisanlar
+                .stream()
+                .filter(p -> p.cinsiyet().equals('K'))
+                .toList();
+        kadinCalisanlar.forEach(System.out::println);
+        System.out.println("---------------------------");
+        double genelOrtalama = calisanlar.stream().mapToDouble(Personel::maas).average().getAsDouble();
+        double kadinCalisanMaasOrtalama = calisanlar.stream().filter(p -> p.cinsiyet().equals('K')).mapToDouble(Personel::maas).average().getAsDouble();
+        double erkekCalisanMaasOrtalama = calisanlar.stream().filter(p -> p.cinsiyet().equals('E')).mapToDouble(Personel::maas).average().getAsDouble();
+        System.out.println("Maaş ortalamaları:");
+        System.out.printf(
+                "\tGenel Maaş Ortalaması : %5.2f\n\tKadın Çalışan Maaş Ortalaması : %5.2f\n\tErkek Çalışan Maaş Ortalaması : %5.2f\n",
+                genelOrtalama,
+                kadinCalisanMaasOrtalama,
+                erkekCalisanMaasOrtalama
+        );
+        System.out.println("---------------------------------");
+        List<Personel> yasaGoreTerstenSiraliListe = calisanlar
+                .stream()
+                .sorted(Comparator.comparing(Personel::yas).reversed()).toList();
+        yasaGoreTerstenSiraliListe.forEach(System.out::println);
+        System.out.printf("---------------------------\n");
+        System.out.println("Yaşı 35'ten büyük kadın sayısı : "+calisanlar.stream().filter(p->p.yas()>35&p.cinsiyet().equals('K')).count());
     }
 }
 
