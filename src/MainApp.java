@@ -1,5 +1,7 @@
+import java.text.Collator;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -37,6 +39,37 @@ public class MainApp {
         yasaGoreTerstenSiraliListe.forEach(System.out::println);
         System.out.printf("---------------------------\n");
         System.out.println("Yaşı 35'ten büyük kadın sayısı : "+calisanlar.stream().filter(p->p.yas()>35&p.cinsiyet().equals('K')).count());
+        long e50 = calisanlar
+                .stream()
+                .filter(p -> p.cinsiyet().equals('E'))
+                .filter(p -> p.yas() < 50)
+                .count();
+        System.out.println("Yaşı 50'den küçük erkek çalışan sayısı : "+e50);
+        System.out.println("-------------------------------");
+        double yasOrtalamasi = calisanlar
+                .stream()
+                .mapToDouble(Personel::yas)
+                .average()
+                .getAsDouble();
+        System.out.printf("Tüm çalışanların yaş ortalaması %5.2f olarak hesaplanmıştır.\n",yasOrtalamasi);
+        System.out.println("--------------------------------");
+        calisanlar
+                .stream()
+                .sorted(
+                        Comparator
+                                .comparing(Personel::cinsiyet)
+                                .reversed()
+                                .thenComparing(Comparator.comparing(Personel::adi, Collator.getInstance(new Locale("tr","TR"))))
+                )
+                .toList().forEach(System.out::println);
+        System.out.println("----------------------------");
+        double sMaasToplami = calisanlar
+                .stream()
+                .filter(p -> p.adi().startsWith("S"))
+                .mapToDouble(Personel::maas)
+                .sum();
+        System.out.println("İsmi S ile başlayan personelin maaş toplamı : "+sMaasToplami);
+
     }
 }
 
